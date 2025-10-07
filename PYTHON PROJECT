@@ -1,0 +1,48 @@
+print("welcome to py games")
+print("choose your game")
+print("1. Numbers guessing game")
+print("2. stone paper scissors")
+game = int(input("Enter your choice: "))
+
+if game == 1:
+    print("welcome to number guessing game")
+    import random as r
+    number = r.randint(0, 10)
+    chances = 0
+    user_input = int(input("Enter your guess: "))
+    while chances < 3:
+        if user_input == number:
+            print("you win")
+            break
+        elif user_input < 0 or user_input > 10:
+            print("invalid input, choose between 0-10")
+        else:
+            print("you lose")
+        chances += 1
+        if chances < 3:
+            user_input = int(input("Enter your guess: "))
+    if user_input != number:
+        print("you lose, the number was", number)
+
+elif game == 2:
+    print("stone, paper and scissors game")
+    import random as r
+    options = ["stone", "paper", "scissors"]
+    user_choice = input("enter your choice (stone paper or scissors): ")
+    computer_choice = options[r.randint(0, 2)]
+    print("computer chose", computer_choice)
+    if user_choice == computer_choice:
+        print("it's a tie")
+    elif (user_choice == "stone" and computer_choice == "scissors") or \
+         (user_choice == "paper" and computer_choice == "stone") or \
+         (user_choice == "scissors" and computer_choice == "paper"):
+        print("you win")
+    else:
+        print("computer wins")
+
+print("thanks for playing the game")
+    
+
+
+
+    
