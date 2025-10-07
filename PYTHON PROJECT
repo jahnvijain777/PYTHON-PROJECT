@@ -1,5 +1,5 @@
-print("welcome to py games")
-print("choose your game")
+print("----welcome to py games----")
+print("~~~choose your game~~~")
 print("1. Numbers guessing game")
 print("2. stone paper scissors")
 game = int(input("Enter your choice: "))
@@ -42,6 +42,7 @@ elif game == 2:
 
 print("thanks for playing the game")
     
+
 
 
 
